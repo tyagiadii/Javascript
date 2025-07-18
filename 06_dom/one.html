@@ -1,0 +1,86 @@
+<!--  DOM -> Document object model -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Learning</title>
+    <style>
+      .bg-black {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div>
+      <h1 id="title" class="heading">
+        DOM learning on day-1 <span>Test text</span>
+      </h1>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <input type="password" name="" id="" />
+
+      <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+        <li class="list-item">three</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<!-- document.getElementById()-->
+<!-- document.getElementById().innerHTML -->
+<!-- some usecase of these are as:
+
+document.getElementById('title')
+output-- <h1 id=​"title" class=​"heading">​DOM learning on day-1​</h1>​
+document.getElementById('title').id
+output-- 'title'
+document.getElementById('title').class
+output -- undefined
+document.getElementById('title').className
+output -- 'heading' 
+
+
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class' , 'test')
+undefined
+
+document.getElementById('title').setAttribute('class' , 'test heading')
+
+undefined
+
+document.getElementById('title')
+<h1 id=​"title" class=​"test heading">​DOM learning on day-1​</h1>​
+
+const title = document.getElementById('title')
+undefined
+title
+<h1 id=​"title" class=​"test heading">​DOM learning on day-1​</h1>​
+
+title.style.backgroundColor = 'green'
+'green'
+
+title
+<h1 id=​"title" class=​"test heading" style=​"background-color:​ green;​">​DOM learning on day-1​</h1>​
+title.style.padd
+undefined
+
+title.style.padding = "15px"
+'15px'
+
+title.style.borderRadius = "15PX"
+'15PX'
+
+
+
+
+
+-->

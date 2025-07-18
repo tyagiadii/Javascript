@@ -1,0 +1,54 @@
+/* style.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.canvas {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.button {
+  height: 40px;
+  width: 80px;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 6px; /* Slight rounding for nicer edges */
+}
+
+/* Assign background colors to each button */
+#grey {
+  background-color: grey;
+}
+
+#white {
+  background-color: white;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}

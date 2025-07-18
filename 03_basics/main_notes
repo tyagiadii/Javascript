@@ -1,0 +1,77 @@
+**\*\*\*\***\*\*\*\***\*\*\*\***\***\*\*\*\***\*\*\*\***\*\*\*\*** Javascript **\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***
+
+- javascript execution context means it defines whatever you make javascript file it tells you how did he run the file.
+
+--in simple terms whatever files you made it tell how javascript run the files.
+it runs the in two phases.
+
+--JS is a single threaded.
+
+1. Global Execution context
+2. Function Execution context
+3. eval EC (optional)
+
+Global Execution context for browser is (Window object).
+
+{.js} we have this javascript code and it runs in two phase:
+
+the two phases are as :
+
+- memory creation phase also known as creation phase.
+- Execution phase.
+
+-In memory creation phase whatever we declared like variables or anything we declared only the space has been allocated there is nothing else. we cannot excute them only they stored im memory.
+-let take an example :
+
+var1 = 10  
+var2 = 20
+
+function addTwoNumber (num1,num2){
+let total = num1+num2
+return total
+}
+
+let result1 = addNum(val1,val2)
+let resutl2 = addNum(10,2)
+
+steps are as: behind the work of javascipt code;
+
+---always global execution comes first
+-this
+---Memory phase
+val1 -> undefined
+val2 -> undefined
+addTwoNum -> definition
+result1 -> undefined
+result2 -> undefined
+this is first cycle of js this comes always.
+
+----Execution phase
+val1 = 10
+val2 = 5
+addNum - there comes another execution process
+it comes with new variable enviroment + execution thread
+(whenever function addNum executes it created new box everyytime)
+now the whole process start again just like before we did previous (memory creation process and execution process.)
+when it completes work it will delete it by its own.
+
+-now memory phase come
+val1 = undefined
+val 2 = undefined
+total = undefined
+
+- now execution process comes
+  num1 = 10
+  num2 = 5
+  total = 15 // it return to global execution
+
+result1 = 15
+result2 addNum = now again repeat the same story.
+
+New variable environment + thread
+now memory execution phase + execution phase
+same work done as before.
+
+// //Callstack
+
+it follows the LIFO Concept means Last In first out.

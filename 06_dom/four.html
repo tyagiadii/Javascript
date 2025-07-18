@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chai or code</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("python");
+    addLanguage("typeScript");
+
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName)); // used 2nd func for optimize process
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("swift");
+
+    // suppose if we want to edit some values then we did like this:
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "mojo";    -- first approach
+    // now see second approach
+
+    const newli = document.createElement("li");
+    newli.textContent = "c+++";
+    secondLang.replaceWith(newli);
+
+    // again we need to replace first element javascript with another language :
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>Typescript</li>";
+
+    // to remove the element from the list
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>
